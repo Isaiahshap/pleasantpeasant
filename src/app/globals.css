@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pp-bg: #F3EFE2;
+  --pp-ink: #0A0A0A;
+  --pp-wood: #2B2118;
+  --pp-rust: #8A4B2A;
+  --pp-olive: #5A5B3E;
+  --pp-cream: #E9E2D0;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans), sans-serif;
+    height: 100%;
+  }
+  
+  body {
+    background-color: var(--pp-bg);
+    color: var(--pp-ink);
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Subtle grain texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 25% 25%, transparent 50%, rgba(10, 10, 10, 0.02) 50%),
+      radial-gradient(circle at 75% 75%, transparent 50%, rgba(10, 10, 10, 0.015) 50%);
+    background-size: 4px 4px, 6px 6px;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display), serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--pp-wood);
+  }
+  
+  /* Focus styles */
+  *:focus-visible {
+    outline: 2px solid var(--pp-olive);
+    outline-offset: 2px;
+  }
+  
+  /* Button base styles */
+  .btn {
+    @apply px-6 py-3 border border-solid border-pp-wood bg-pp-cream text-pp-wood font-medium transition-colors duration-200;
+  }
+  
+  .btn:hover {
+    @apply bg-pp-rust text-white;
+  }
+  
+  /* Link styles */
+  a {
+    color: var(--pp-rust);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+}
