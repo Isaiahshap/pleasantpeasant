@@ -27,7 +27,7 @@ export default function Home() {
           {/* Hero Image - Desktop */}
           <div className="absolute inset-0 w-full h-full hidden md:block">
             <Image
-              src="/gavi-hero.png"
+              src="/gavi-hero.webp"
               alt="Pleasant Peasant"
               fill
               className="object-cover object-bottom"
