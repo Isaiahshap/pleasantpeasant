@@ -15,10 +15,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Pleasant Peasant | Ancient art meets modern folk",
+  title: "Pleasant Peasant",
   description: "Pleasant Peasant is the moniker of Brooklyn-based experimental folk musician Gavi Kutliroff. His music is an eclectic blend between ancient traditional styles, modern songwriting sensibilities, and deep, hypnotic soundscapes.",
   openGraph: {
-    title: "Pleasant Peasant | Ancient art meets modern folk",
+    title: "Pleasant Peasant",
     description: "Pleasant Peasant is the moniker of Brooklyn-based experimental folk musician Gavi Kutliroff. His music is an eclectic blend between ancient traditional styles, modern songwriting sensibilities, and deep, hypnotic soundscapes.",
     type: "website",
     url: "https://pleasantpeasant.com",
