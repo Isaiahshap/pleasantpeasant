@@ -28,7 +28,7 @@ export default function About() {
         </div>
         
         
-        <Section className="relative z-10 pt-36 pb-20 px-8">
+        <Section className="relative z-10 pt-36 pb-20 px-2 sm:px-8">
           <Container>
             <motion.div
               variants={staggerContainer}
@@ -44,13 +44,13 @@ export default function About() {
                 About
               </motion.h1>
               
-              <div className="flex flex-col items-center space-y-12 max-w-2xl mx-auto px-4">
+               <div className="flex flex-col items-center space-y-12 w-full sm:max-w-6xl mx-auto px-1 sm:px-8">
                 {/* Bio Text */}
                 <motion.div
                   variants={staggerItem}
                   className="relative w-full"
                 >
-                  <div className="bg-black/30 backdrop-blur-sm border-2 border-pp-cream p-8 lg:p-12 shadow-xl">
+                  <div className="bg-black/30 backdrop-blur-sm border-0 sm:border-2 sm:border-pp-cream p-2 sm:p-8 lg:p-12 shadow-xl">
                     <motion.p 
                       variants={staggerItem}
                       className="text-lg lg:text-xl leading-relaxed text-pp-cream mb-6 font-light"
@@ -80,7 +80,7 @@ export default function About() {
                     </motion.div>
                   </div>
                   {/* Decorative border effect */}
-                  <div className="absolute -inset-2 border border-pp-cream/30 -z-10"></div>
+                  <div className="absolute -inset-2 border border-pp-cream/30 -z-10 hidden sm:block"></div>
                 </motion.div>
 
                 {/* Bio Image */}
@@ -88,7 +88,7 @@ export default function About() {
                   variants={staggerItem}
                   className="relative w-full"
                 >
-                  <div className="relative w-full h-96 lg:h-[32rem] border-2 border-pp-cream overflow-hidden shadow-2xl">
+                  <div className="relative w-full h-96 lg:h-[32rem] border-0 sm:border-2 sm:border-pp-cream overflow-hidden shadow-2xl">
                     <Image
                       src="/gavi2.jpeg"
                       alt="Gavi Kutliroff - Pleasant Peasant"
@@ -98,7 +98,7 @@ export default function About() {
                     />
                   </div>
                   {/* Decorative border effect */}
-                  <div className="absolute -inset-2 border border-pp-cream/30 -z-10"></div>
+                  <div className="absolute -inset-2 border border-pp-cream/30 -z-10 hidden sm:block"></div>
                 </motion.div>
                 
                 {/* Contact Box */}
@@ -106,8 +106,7 @@ export default function About() {
                   variants={staggerItem}
                   className="relative w-full"
                 >
-                  <div className="bg-black/40 backdrop-blur-sm border-2 border-pp-cream px-4 sm:px-8 py-6 text-center shadow-xl w-full">
-                    <p className="text-pp-cream text-sm font-light mb-2">Contact Gavi at</p>
+                  <div className="bg-black/40 backdrop-blur-sm border-0 sm:border-2 sm:border-pp-cream px-1 sm:px-8 py-3 sm:py-6 text-center shadow-xl w-full">
                     <a 
                       href="mailto:pleasantpeasantmusic@gmail.com"
                       className="text-pp-cream hover:text-white transition-colors duration-300 font-medium tracking-wide underline text-sm sm:text-base break-all"
@@ -116,7 +115,7 @@ export default function About() {
                     </a>
                   </div>
                   {/* Decorative border effect */}
-                  <div className="absolute -inset-2 border border-pp-cream/30 -z-10"></div>
+                  <div className="absolute -inset-2 border border-pp-cream/30 -z-10 hidden sm:block"></div>
                 </motion.div>
               </div>
             </motion.div>

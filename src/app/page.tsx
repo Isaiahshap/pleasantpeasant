@@ -6,7 +6,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Container from '@/components/Container';
 import Section from '@/components/Section';
-import Button from '@/components/Button';
 import { titleReveal, letterStagger, letterReveal, fadeInUp, staggerContainer, staggerItem } from '@/lib/motion';
 
 export default function Home() {
@@ -159,6 +158,97 @@ export default function Home() {
           </div>
         </section>
 
+        {/* East of the Sun Album Section */}
+        <Section className="bg-pp-wood py-16 border-b border-pp-cream">
+          <Container maxWidth="full">
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              className="flex flex-col lg:flex-row items-center justify-center gap-8 max-w-6xl mx-auto"
+            >
+              {/* Album Cover - Clickable */}
+              <motion.div variants={staggerItem} className="flex-shrink-0">
+                <a 
+                  href="https://open.spotify.com/album/07qRW9KuzsIQONNjqVhrWM?si=Gt5OKszdQuWox1pZubQXQA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block transition-transform duration-300 hover:scale-105"
+                >
+                  <Image
+                    src="/eastofthesun.png"
+                    alt="East of the Sun Album Cover"
+                    width={352}
+                    height={352}
+                    className="rounded-xl shadow-lg border-2 border-pp-cream"
+                  />
+                </a>
+              </motion.div>
+
+              {/* Spotify Embed */}
+              <motion.div variants={staggerItem} className="w-full max-w-md">
+                <iframe 
+                  data-testid="embed-iframe" 
+                  style={{borderRadius:'12px'}} 
+                  src="https://open.spotify.com/embed/album/07qRW9KuzsIQONNjqVhrWM?utm_source=generator&theme=0" 
+                  width="100%" 
+                  height="352" 
+                  frameBorder="0" 
+                  allowFullScreen={true}
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                  loading="lazy"
+                />
+              </motion.div>
+            </motion.div>
+          </Container>
+        </Section>
+
+        {/* Film Festival Section */}
+        <Section className="bg-pp-wood py-12">
+          <Container maxWidth="full">
+            <motion.div
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              className="flex justify-center"
+            >
+              <Image
+                src="/filmfestival.PNG"
+                alt="Official Selection Nashville Film Festival"
+                width={400}
+                height={200}
+                className="rounded-lg invert"
+              />
+            </motion.div>
+          </Container>
+        </Section>
+
+        {/* Featured Video Section */}
+        <Section className="bg-pp-wood py-12 border-b border-pp-cream">
+          <Container maxWidth="full">
+            <motion.div
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              className="flex justify-center max-w-4xl mx-auto"
+            >
+              <div className="relative aspect-video w-full bg-pp-cream border-2 border-pp-cream overflow-hidden rounded-lg shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/OdW5JEbjt3Y?start=4&rel=0&modestbranding=1"
+                  title="Pleasant Peasant - Featured Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading="lazy"
+                  className="w-full h-full border-0"
+                />
+              </div>
+            </motion.div>
+          </Container>
+        </Section>
+
         {/* Videos Section */}
         <Section className="bg-pp-wood py-16 border-b border-pp-cream">
           <Container maxWidth="full">
@@ -168,12 +258,7 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
             >
-              <motion.h2 
-                variants={fadeInUp}
-                className="text-4xl sm:text-5xl font-display text-pp-cream text-center mb-12"
-              >
-                Recent Work
-              </motion.h2>
+      
               
               <motion.div 
                 variants={staggerContainer}
@@ -196,68 +281,6 @@ export default function Home() {
                   </motion.div>
                 ))}
               </motion.div>
-            </motion.div>
-          </Container>
-        </Section>
-
-        {/* About Teaser Section */}
-        <Section className="bg-pp-rust py-16 border-t border-b border-pp-cream relative overflow-hidden" as="div">
-          {/* Enhanced texture overlay */}
-          <div className="absolute inset-0 opacity-20 pointer-events-none">
-            <div 
-              className="w-full h-full"
-              style={{
-                backgroundImage: `
-                  radial-gradient(circle at 25% 25%, transparent 50%, rgba(233, 226, 208, 0.05) 50%),
-                  radial-gradient(circle at 75% 75%, transparent 50%, rgba(233, 226, 208, 0.03) 50%),
-                  linear-gradient(45deg, transparent 49%, rgba(233, 226, 208, 0.01) 50%, transparent 51%)
-                `,
-                backgroundSize: '4px 4px, 6px 6px, 20px 20px'
-              }}
-            />
-          </div>
-          
-          {/* Subtle horse background */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
-            <Image
-              src="/horse.png"
-              alt=""
-              width={300}
-              height={300}
-              className="object-contain"
-              quality={90}
-            />
-          </div>
-          
-          <Container>
-            <motion.div
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="text-center relative z-10"
-            >
-              {/* Decorative flourish */}
-              <div className="flex items-center justify-center mb-6">
-                <div className="w-8 h-px bg-pp-cream/50"></div>
-                <div className="mx-4 w-2 h-2 bg-pp-cream/50 rotate-45"></div>
-                <div className="w-8 h-px bg-pp-cream/50"></div>
-              </div>
-              
-              <p className="text-lg lg:text-xl mb-8 text-pp-cream max-w-2xl mx-auto leading-relaxed font-light italic">
-                Pleasant Peasant creates a mood of spiritual melancholy that captures the experience of connection and disconnection with the weird and wild world of today.
-              </p>
-              
-              {/* Decorative flourish */}
-              <div className="flex items-center justify-center mb-8">
-                <div className="w-8 h-px bg-pp-cream/50"></div>
-                <div className="mx-4 w-2 h-2 bg-pp-cream/50 rotate-45"></div>
-                <div className="w-8 h-px bg-pp-cream/50"></div>
-              </div>
-              
-              <Button href="/about">
-                About / Bio
-              </Button>
             </motion.div>
           </Container>
         </Section>

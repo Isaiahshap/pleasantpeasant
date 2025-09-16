@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pleasant Peasant | Ancient art meets modern folk",
+    title: "Pleasant Peasant",
     description: "Pleasant Peasant is the moniker of Brooklyn-based experimental folk musician Gavi Kutliroff. His music is an eclectic blend between ancient traditional styles, modern songwriting sensibilities, and deep, hypnotic soundscapes.",
     images: ["/og.png"],
   },
